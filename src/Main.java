@@ -1,15 +1,31 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
+        Scanner iptScanner = new Scanner(System.in);
         System.out.println("Hello and welcome!");
+        System.out.print("Week: ");
+        int x = iptScanner.nextInt();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        switch (x) {
+            case 1:
+                Week1 objWeek1 = new Week1();
+                break;
+            case 2:
+                Week2 objWeek2 = new Week2();
+                break;
+            case 3:
+                Week3 objWeek3 = new Week3(iptScanner);
+                break;
+            case 4:
+                Week4 objWeek4 = new Week4();
+                break;
+            case 5:
+//                Week5 objWeek5 = new Week5();
+                break;
+            default:
+                break;
         }
+        iptScanner.close();
     }
 }
