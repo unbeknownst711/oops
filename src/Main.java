@@ -9,16 +9,16 @@ public class Main {
 
         switch (x) {
             case 1:
-                Week1 objWeek1 = new Week1();
+                new Week1();
                 break;
             case 2:
-                Week2 objWeek2 = new Week2();
+                new Week2();
                 break;
             case 3:
-                Week3 objWeek3 = new Week3(iptScanner);
+                new Week3(iptScanner);
                 break;
             case 4:
-                Week4 objWeek4 = new Week4();
+                new Week4();
                 break;
             case 5:
 //                Week5 objWeek5 = new Week5();
