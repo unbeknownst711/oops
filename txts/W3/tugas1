@@ -1,0 +1,29 @@
+1. Jelaskan multidimensional arrays dan berikan contoh.
+2. Sebutkan dan jelaskan 13 method-method string dalam Java
+3. Sebutkan 2 keuntungan Immutability dalam Java.
+
+
+1. array dalam array
+contoh: {
+    {1,2,3},
+    {4,5,6},
+    {7,8,9)
+}
+
+2.
+charAt(x), return karakter pada index ke x
+toLowerCase(), return string huruf kecil
+toUpperCase(), return string huruf besar
+toCharArray(), return array char berisi karakter pada string
+length(), return panjang string
+matches(x), return true jika string sesuai regex x
+split(x), return array string berisi substring dengan pemisah x
+replace(x,y), return string dengan setiap instance x diganti dengan y
+contains(x), return true jika string mengandung x
+substring(x), return substring yang dimulai dari indeks x pada string
+substring(x,y), return substring yang dimulai dari indeks x sampai indeks y
+concat(x), menggabungkan string awal dengan string x
+repeat(x), return pengulangan string sebanyak x kali
+
+3. kode konsisten dan sederhana
+variabel tetap untuk konstan yang tidak perlu diganti

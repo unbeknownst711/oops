@@ -8,7 +8,7 @@ public class Tutorial {
         switch (week){
             case 1: T1();break;
             case 2: T2(iptTutorial);break;
-            case 3: T3();break;
+            case 3: T3(iptTutorial);break;
             case 4: T4();break;
             case 5: T5();break;
             case 6: T6();break;
@@ -37,8 +37,20 @@ public class Tutorial {
             System.out.println("- " + matkul);
         }
     }
-    private void T3(){
-
+    private void T3(Scanner iptT3){
+        String[] IF = {"a", "b", "c"};
+        String[] CE = {"d", "e", "f"};
+        String[] IS = {"g", "h", "i"};
+        System.out.println("kategori matkul");
+        System.out.println("1. if\n2. ce\n3. is");
+        System.out.print("pilih: ");
+        int ipt = iptT3.nextInt();
+        switch (ipt){
+            case 1: show(IF);break;
+            case 2: show(CE);break;
+            case 3: show(IS);break;
+            default: break;
+        }
     }
     private void T4(){
 
