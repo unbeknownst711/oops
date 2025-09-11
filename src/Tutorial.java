@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Tutorial {
     public Tutorial(Scanner iptTutorial){
         int week;
-        System.out.println("Week: ");
+        System.out.print("Week: ");
         week = iptTutorial.nextInt();
         switch (week){
             case 1: T1();break;
