@@ -6,7 +6,7 @@ public class Main {
         System.out.println("Hello and welcome!");
         System.out.print("Week (0 for tutorial): ");
         int x = iptScanner.nextInt();
-//        iptScanner.nextLine();
+        iptScanner.nextLine();
 
         switch (x) {
             case 0:

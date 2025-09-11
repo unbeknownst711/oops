@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class Week3 {
     public Week3(Scanner iptW3){
         System.out.print("Masukkan Nama: ");
-        iptW3.nextLine();
         String _name = iptW3.nextLine();
         System.out.println("---------------------");
         System.out.println("String: " + _name);

@@ -1,3 +1,4 @@
+import tutorialClass.*;
 import java.util.Scanner;
 
 public class Tutorial {
@@ -9,7 +10,7 @@ public class Tutorial {
             case 1: T1();break;
             case 2: T2(iptTutorial);break;
             case 3: T3(iptTutorial);break;
-            case 4: T4();break;
+            case 4: T4Main.start(iptTutorial);break;
             case 5: T5();break;
             case 6: T6();break;
         }
@@ -51,9 +52,6 @@ public class Tutorial {
             case 3: show(IS);break;
             default: break;
         }
-    }
-    private void T4(){
-
     }
     private void T5(){
 
