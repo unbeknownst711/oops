@@ -22,7 +22,7 @@ public class Main {
                 new Week3(iptScanner);
                 break;
             case 4:
-                new Week4();
+                new Week4(iptScanner);
                 break;
             case 5:
 //                Week5 objWeek5 = new Week5();
