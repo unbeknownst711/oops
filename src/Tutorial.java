@@ -11,8 +11,9 @@ public class Tutorial {
             case 2: T2(iptTutorial);break;
             case 3: T3(iptTutorial);break;
             case 4: T4Main.start(iptTutorial);break;
-            case 5: T5();break;
+            case 5: T5(iptTutorial);break;
             case 6: T6();break;
+            default: break;
         }
     }
     private void T1(){
@@ -53,7 +54,17 @@ public class Tutorial {
             default: break;
         }
     }
-    private void T5(){
+    private void T5(Scanner iptT5){
+        System.out.print("Jari-jari lingkaran: ");
+        double radius = iptT5.nextDouble();
+        iptT5.nextLine();
+        System.out.print("Warna: ");
+        String warna = iptT5.nextLine();
+
+        Circle circle = new Circle(warna, radius);
+        System.out.println("----Lingkaran----");
+        System.out.printf("%-20s: %s\n%-20s: %f\n%-20s: %f\n%-20s: %f\n", "Warna", circle.get_color(),
+                "Jari-jari",circle.get_radius(),"Keliling",circle.getPerimeter(), "Luas", circle.getArea());
 
     }
     private void T6(){

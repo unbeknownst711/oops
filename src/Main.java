@@ -25,7 +25,7 @@ public class Main {
                 new Week4(iptScanner);
                 break;
             case 5:
-//                Week5 objWeek5 = new Week5();
+                new Week5(iptScanner);
                 break;
             default:
                 break;
