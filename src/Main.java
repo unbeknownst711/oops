@@ -27,6 +27,9 @@ public class Main {
             case 5:
                 new Week5(iptScanner);
                 break;
+            case 6:
+                new Week6(iptScanner);
+                break;
             default:
                 break;
         }
