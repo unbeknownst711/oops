@@ -10,7 +10,9 @@ public class Week6 {
     public Week6(Scanner iptW6) {
         int chc;
         while(true) {
+            lineBreak();
             chc = menuUtama(iptW6);
+            lineBreak();
             switch (chc) {
                 case 1:
                     menuPesanan(iptW6);
@@ -37,15 +39,19 @@ public class Week6 {
         return chc;
     }
     private void showPesanan(){
+        if(orders.isEmpty()){
+            System.out.println("No order");
+            return;
+        }
         for(Order o : orders){
             if(o.get_handphone() != null){
-                System.out.printf("%-7s: %s\n%-7s: %s\n%-7s: %d\n%-7s: %d\n", "ID", o.getId(), "Nama",
-                        o.get_handphone().getNama() + " " + o.get_handphone().getWarna(), "Jumlah", o.get_jumlah(),
-                        "Total", Math.round(o.get_handphone().getHarga() * o.get_jumlah()));
+                System.out.printf("%-7s: %s\n%-7s: %s %s\n%-7s: %d\n%-7s: %.0f\n", "ID", o.getId(), "Nama",
+                        o.get_handphone().getNama(), o.get_handphone().getWarna(), "Jumlah", o.get_jumlah(),
+                        "Total", o.get_handphone().getHarga() * o.get_jumlah());
             } else {
-                System.out.printf("%-7s: %s\n%-7s: %s\n%-7s: %d\n%-7s: %d\n", "ID", o.getId(), "Nama",
-                        o.get_voucher().getNama() + " " + o.get_voucher().getHarga(), "Jumlah", o.get_jumlah(),
-                        "Total", Math.round(o.get_voucher().getHargaJual() * o.get_jumlah()));
+                System.out.printf("%-7s: %s\n%-7s: %s %.0f\n%-7s: %d\n%-7s: %.0f\n", "ID", o.getId(), "Nama",
+                        o.get_voucher().getNama(), o.get_voucher().getHarga(), "Jumlah", o.get_jumlah(),
+                        "Total", o.get_voucher().getHargaJual() * o.get_jumlah());
             }
         }
     }
@@ -60,6 +66,10 @@ public class Week6 {
         lineBreak();
         int id, jumlah;
         if(type == 'V'){
+            if(vouchers.isEmpty()){
+                System.out.println("No voucher");
+                return;
+            }
             for(Voucher v : vouchers){
                 System.out.printf("%-8s: %d\n%-8s: %s\n%-8s: %.0f\n%-8s: %d\n%-8s: %.0f\n", "ID", v.getId(), "Nama",
                         v.getNama(), "Nominal", v.getHarga(),"Stok", v.getStok(), "Harga", v.getHargaJual());
@@ -77,7 +87,7 @@ public class Week6 {
                 System.out.println("Invalid Input");
                 return;
             }
-            System.out.println(jumlah + " @ " + temp.getNama()+" "+temp.getHarga()+ " dengan harga " + temp.getHargaJual() * jumlah);
+            System.out.printf("%d @ %s %.0f dengan harga %.0f\n", jumlah, temp.getNama(), temp.getHarga(), temp.getHargaJual() * jumlah);
             System.out.print("Masukkan jumlah uang: ");
             if(iptM2.nextInt() < temp.getHargaJual() * jumlah){
                 System.out.println("Uang tidak cukup");
@@ -89,6 +99,10 @@ public class Week6 {
             System.out.println("Berhasil dipesan");
 
         } else {
+            if(hps.isEmpty()){
+                System.out.println("No handphone");
+                return;
+            }
             for(Handphone h : hps){
                 System.out.printf("%-8s: %d\n%-8s: %s %s\n%-8s: %d\n%-8s: %.0f\n", "ID", h.getId(), "Nama",
                         h.getNama(), h.getWarna(),"Stok", h.getStok(), "Harga", h.getHarga());
@@ -106,7 +120,7 @@ public class Week6 {
                 System.out.println("Invalid Input");
                 return;
             }
-            System.out.println(jumlah + " @ " + temp.getNama()+" "+temp.getWarna()+ " dengan harga " + temp.getHarga() * jumlah);
+            System.out.printf("%d @ %s %s dengan harga %.0f\n", jumlah, temp.getNama(), temp.getWarna(), temp.getHarga() * jumlah);
             System.out.print("Masukkan jumlah uang: ");
             if(iptM2.nextInt() < temp.getHarga() * jumlah){
                 System.out.println("Uang tidak cukup");
@@ -123,6 +137,7 @@ public class Week6 {
         System.out.println("--Tambah Barang--");
         System.out.print("Voucher/Handphone (V/H): ");
         char type = iptM3.next().toUpperCase().charAt(0);
+        iptM3.nextLine();
         if(type != 'V' && type != 'H'){
             System.out.println("Invalid Input");
             return;
@@ -147,7 +162,7 @@ public class Week6 {
         System.out.println((type == 'V' ? "Voucher" : "Handphone") + " telah berhasil diinput");
     }
     private void lineBreak(){
-        System.out.println("----------------------------------");
+        System.out.println("------------------------------");
     }
 
 }
