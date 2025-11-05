@@ -36,9 +36,9 @@ public class Main {
             case 8:
                 new Week8(iptScanner);
                 break;
-//            case 9:
-//                new Week6(iptScanner);
-//                break;
+            case 9:
+                new Week9();
+                break;
 //            case 10:
 //                new Week6(iptScanner);
 //                break;
