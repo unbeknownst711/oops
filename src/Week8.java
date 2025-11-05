@@ -64,7 +64,7 @@ public class Week8 {
                 else if(chc == 2) {
                     System.out.print("Jumlah cicilan(3/6/9/12): ");
                     int x = iptW8.nextInt();
-                    if(x%3 != 0 && (x-1)/12 != 0) continue;
+                    if(x%3 != 0 || x>12 || x<=0) continue;
 
                     Payment temp1 = new Credit(temp, x);
                     int t = temp1.pay();

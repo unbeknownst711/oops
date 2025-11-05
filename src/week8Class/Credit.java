@@ -11,7 +11,7 @@ public class Credit extends Payment{
     public int pay() {
         if(isPaidOff) return 0;
         totinst += this.item.getPrice()/inst;
-        if(totinst>this.item.getPrice()) isPaidOff = true;
+        if(totinst>=this.item.getPrice()) isPaidOff = true;
         return this.item.getPrice()/inst;
     }
     public String getClassName(){
