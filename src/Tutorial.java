@@ -13,6 +13,8 @@ public class Tutorial {
             case 4: T4Main.start(iptTutorial);break;
             case 5: T5(iptTutorial);break;
             case 6: T6();break;
+            case 7: break;
+            case 8: T8();break;
             default: break;
         }
     }
@@ -70,4 +72,15 @@ public class Tutorial {
     private void T6(){
 
     }
+    public void T8() {
+        Payment creditCardPayment = new Credit(100.0, "1234-5678-9012-3456");
+        Payment bankTransferPayment = new Bank(300.0, "9876543210");
+
+        creditCardPayment.paymentDetail();
+        creditCardPayment.processPayment();
+
+        bankTransferPayment.paymentDetail();
+        bankTransferPayment.processPayment();
+    }
+
 }
